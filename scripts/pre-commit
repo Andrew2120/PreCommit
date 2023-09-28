@@ -2,7 +2,7 @@
 
 # Check for code style violations with ktlint
 echo "Running git pre-commit hook"
-./gradlew app
+./gradlew ktlintFormat
 STATUS=$?
 # return 1 exit code if running checks fails
 [ $STATUS -ne 0 ] && exit 1
