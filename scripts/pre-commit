@@ -1,6 +1,6 @@
 #!/bin/bash
 # Run Ktlint to check for code style errors
-./gradlew app:ktlintFormat --daemon
+./gradlew ktlintFormat
 # Capture the exit code of the previous command
 ktlint_exit_code=$?
 echo "CODE ="$ktlint_exit_code
