@@ -1,11 +1,9 @@
 #!/bin/sh
 
 # Check for code style violations with ktlint
-./gradlew ktlintFormat
-
-# If there are any violations, exit with a non-zero status code
-# to prevent the commit from being made
-if [ $? -ne 0 ]; then
-  echo "Code style violations found. Please fix them and try again."
-  exit 1
-fi
+echo "Running git pre-commit hook"
+./gradlew app: ktlintCheck -- daemon
+STATUS=$?
+# return 1 exit code if running checks fails
+[$STATUS -ne 0 ] && exit 1
+exit 0
