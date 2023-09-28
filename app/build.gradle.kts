@@ -55,7 +55,7 @@ configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
     verbose.set(true)
     android.set(false)
     outputToConsole.set(true)
-    ignoreFailures.set(true)
+    ignoreFailures.set(false)
     enableExperimentalRules.set(true)
     reporters {
         reporter(ReporterType.PLAIN)

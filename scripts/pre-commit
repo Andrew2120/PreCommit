@@ -3,7 +3,7 @@
 ./gradlew ktlintFormat
 # Capture the exit code of the previous command
 ktlint_exit_code=$?
-echo "CODEE ="$ktlint_exit_code
+echo "CODE ="$ktlint_exit_code
 # Check if Ktlint found errors
 if [ $ktlint_exit_code -ne 0 ]; then
     echo "Ktlint found errors. Commit aborted."
