@@ -53,7 +53,7 @@ android {
 }
 configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
     verbose.set(true)
-    android.set(true)
+    android.set(false)
     outputToConsole.set(true)
     ignoreFailures.set(true)
     enableExperimentalRules.set(true)
