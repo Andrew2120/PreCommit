@@ -17,12 +17,13 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             PreCommitTheme {
+                //
                 //A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android Hello !!!!dsadsadsadsa!!!!!!QQQ!!")
+                    Greeting("Android Hello !!!!dsadsad!!!sadsa!!!!!!QQQ!!")
                 }
             }
         }
