@@ -51,25 +51,6 @@ android {
         }
     }
 }
-configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
-    verbose.set(true)
-    android.set(false)
-    outputToConsole.set(true)
-    ignoreFailures.set(false)
-    enableExperimentalRules.set(true)
-    reporters {
-        reporter(ReporterType.PLAIN)
-        reporter(ReporterType.CHECKSTYLE)
-        reporter(ReporterType.HTML)
-    }
-}
-tasks.register<Copy>("installGitHook") {
-    description = "Install Git hook"
-    group = "custom"
-    from(File(rootProject.rootDir, "scripts/pre-commit"))
-    into { File(rootProject.rootDir, ".git/hooks") }
-    fileMode = 777
-}
 
 dependencies {
 
