@@ -1,4 +1,4 @@
-package com.b_labs.precommit
+package com.blabs.precommit
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -10,7 +10,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.b_labs.precommit.ui.theme.PreCommitTheme
+import com.blabs.precommit.ui.theme.PreCommitTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,9 +21,9 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background,
+                    color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android Hello !!!!!!!!!!!!!!!dsadsad!!!sadsa!!!!!!QQQ!!")
+                    Greeting("Android Hello !!!!!!!!!!!!!!!!!!!!dsadsad!!!sadsa!!!!!!QQQ!!")
                 }
             }
         }
@@ -34,7 +34,7 @@ class MainActivity : ComponentActivity() {
 fun Greeting(name: String, modifier: Modifier = Modifier) {
     Text(
         text = "Hello $name!",
-        modifier = modifier,
+        modifier = modifier
     )
 }
 

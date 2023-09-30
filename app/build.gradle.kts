@@ -29,7 +29,7 @@ android {
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
-            )
+                                )
         }
     }
     compileOptions {
@@ -63,10 +63,6 @@ configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
         reporter(ReporterType.HTML)
         reporter(ReporterType.CHECKSTYLE)
         reporter(ReporterType.HTML)
-    }
-    filter {
-        exclude("**/generated/**")
-        include("**/Compose/**")
     }
 }
 
