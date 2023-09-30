@@ -64,7 +64,6 @@ configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
         reporter(ReporterType.CHECKSTYLE)
         reporter(ReporterType.HTML)
     }
-
 }
 
 dependencies {
