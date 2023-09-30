@@ -2,7 +2,7 @@
 echo "Starting Ktlint"
 
 # Run Ktlint to check for code style errors
-./gradlew ktlintFormat
+./gradlew --continue ktlintFormat
 # Capture the exit code of the previous command
 Exit_code=$?
 # Check if Ktlint found errors
