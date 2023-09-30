@@ -3,7 +3,7 @@
   <component name="KtlintProjectConfiguration">
     <androidMode>true</androidMode>
     <useExperimental>true</useExperimental>
-    <formatOnSave>true</formatOnSave>
+    <lintAfterReformat>false</lintAfterReformat>
     <disabledRules>
       <list>
         <option value="package-name" />
