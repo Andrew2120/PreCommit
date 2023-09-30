@@ -3,6 +3,7 @@ echo "Starting Ktlint"
 
 # Run Ktlint to check for code style errors
 ./gradlew ktlintFormat
+./gradlew ktlintCheck
 # Capture the exit code of the previous command
 Exit_code=$?
 # Check if Ktlint found errors
@@ -16,7 +17,7 @@ echo "Starting Unit testing"
 test_exit_code=$?
 # Check if Ktlint found errors
 if [ $test_exit_code -ne 0 ]; then
-    echo "Test Errors"
+    echo "Test Errors. Commit aborted"
     exit 1
 fi
 # If no errors were found, allow the commit
