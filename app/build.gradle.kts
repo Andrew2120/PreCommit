@@ -64,10 +64,7 @@ configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
         reporter(ReporterType.CHECKSTYLE)
         reporter(ReporterType.HTML)
     }
-    filter {
-        exclude("**/generated/**")
-        include("**/Compose/**")
-    }
+
 }
 
 dependencies {
