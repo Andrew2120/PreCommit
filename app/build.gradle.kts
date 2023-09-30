@@ -28,7 +28,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }
@@ -55,9 +55,9 @@ configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
     verbose.set(true)
     android.set(true)
     outputToConsole.set(true)
-    outputColorName.set("RED")
+    outputColorName.set("BLUE")
     ignoreFailures.set(false)
-    disabledRules.set(setOf("package-name")) // not supported with ktlint 0.48+
+    disabledRules.set(setOf("package-name"))
     enableExperimentalRules.set(true)
     reporters {
         reporter(ReporterType.HTML)
