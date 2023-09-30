@@ -5,6 +5,7 @@
       <list>
         <option value="package-name" />
         <option value="package-name" />
+        <option value="indent" />
       </list>
     </disabledRules>
   </component>

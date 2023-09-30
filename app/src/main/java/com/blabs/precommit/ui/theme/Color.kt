@@ -1,4 +1,4 @@
-package com.b_labs.precommit.ui.theme
+package com.blabs.precommit.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

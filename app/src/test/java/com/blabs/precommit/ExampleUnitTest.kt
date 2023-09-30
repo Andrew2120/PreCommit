@@ -1,4 +1,4 @@
-package com.b_labs.precommit
+package com.blabs.precommit
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
