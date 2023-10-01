@@ -14,7 +14,7 @@ jobs:
           level: 'error'
 
           # ktlint
-          code-style: android_studio
+          code-style: android
           relative: true
           experimental: true
           patterns: |
