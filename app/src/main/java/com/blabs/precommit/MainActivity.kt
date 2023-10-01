@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
                 ) {
                     Greeting(
                         "Android Hello !!!!!!!!!!!!!!!1" +
-                            "1!!!1!!!!!!111!!!!!dsadsad!!!sadsa!!!!!!QQQ!!"
+                            "1!!!!!!1!!!!!!111!!!!!dsadsad!!!sadsa!!!!!!QQQ!!"
                     )
                 }
             }
