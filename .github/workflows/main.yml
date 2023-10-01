@@ -1,4 +1,4 @@
-name: reviewdog
+name: ktlint
 on: [ pull_request ]
 jobs:
   ktlint:
@@ -16,8 +16,6 @@ jobs:
           # ktlint
           code-style: android_studio
           relative: true
-          verbose: true
-          android: true
           experimental: true
           reporter: |
             plain,output=ktlint_report.txt
