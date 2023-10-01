@@ -24,7 +24,7 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     Greeting(
-                        "Android Hello !!!!!!!!!!!!!111!!!!!!111!!!!!dsadsad!!!sadsa!!!!!!QQQ!!"
+                        "Android Hello !!!!!!!!!!!!!11!!!1!!!!!!111!!!!!dsadsad!!!sadsa!!!!!!QQQ!!"
                     )
                 }
             }
