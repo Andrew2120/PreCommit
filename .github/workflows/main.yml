@@ -1,25 +1,14 @@
-name: ktlint
-on: [ pull_request ]
+name: Project
+on: [pull_request]
 jobs:
   ktlint:
     name: Check Code Quality
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: musichin/ktlint-check@v2
-        continue-on-error: false
+      - name: Clone PR
+        uses: actions/checkout@v2
         with:
-          ktlint-version: '1.0.0'
-          level: 'error'
-
-          # ktlint
-          code-style: android_studio
-          relative: true
-          experimental: true
-          reporter: |
-            plain,output=ktlint_report.txt
-            json,output=ktlint_report.json
-          patterns: |
-            **/**.kt
-            !**/generated/**
+          fetch-depth: 1
+      - name: Run Ktlint
+        uses: lucasnlm/ktlint-action@master
