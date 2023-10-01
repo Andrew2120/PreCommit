@@ -15,4 +15,5 @@ jobs:
         with:
           fail_on_error: true
           android: true
+          github_token: ${{ secrets.github_token }}
           reporter: github-pr-review # Change reporter
