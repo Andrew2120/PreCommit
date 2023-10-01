@@ -1,4 +1,4 @@
-name: Ktlint
+name: reviewdog
 on: [ pull_request ]
 jobs:
   ktlint:
@@ -6,17 +6,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: musichin/ktlint-check@v2
-        continue-on-error: false
+      - name: Clone repo
+        uses: actions/checkout@master
         with:
-          ktlint-version: '1.0.0'
-          level: 'error'
-
-          # ktlint
-          code-style: android
-          relative: true
-          experimental: true
-          patterns: |
-            **/**.kt
-            !**/generated/**
+          fetch-depth: 1
+      - name: ktlint
+        uses: ScaCap/action-ktlint@master
+        with:
+          fail_on_error: true
+          github_token: ${{ secrets.github_token }}
+          reporter: github-pr-review # Change reporter
