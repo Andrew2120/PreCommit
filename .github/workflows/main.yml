@@ -8,18 +8,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: musichin/ktlint-check@v2
-        continue-on-error: true
+        continue-on-error: false
         with:
           ktlint-version: '1.0.0'
-          level: 'warning'
+          level: 'error'
 
           # ktlint
           code-style: android_studio
           relative: true
           experimental: true
-          reporter: |
-            plain,output=ktlint_report.txt
-            json,output=ktlint_report.json
           patterns: |
             **/**.kt
             !**/generated/**
