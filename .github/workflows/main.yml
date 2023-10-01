@@ -1,20 +1,27 @@
-steps:
-  - uses: actions/checkout@v2
-  - uses: musichin/ktlint-check@v2
-    continue-on-error: true
-    with:
-      ktlint-version: '1.0.0'
-      level: 'warning'
+name: reviewdog
+on: [ pull_request ]
+jobs:
+  ktlint:
+    name: Check Code Quality
+    runs-on: ubuntu-latest
 
-      # ktlint
-      code-style: android_studio
-      relative: true
-      verbose: true
-      android: true
-      experimental: true
-      reporter: |
-        plain,output=ktlint_report.txt
-        json,output=ktlint_report.json
-      patterns: |
-        **/**.kt
-        !**/generated/**
+    steps:
+      - uses: actions/checkout@v2
+      - uses: musichin/ktlint-check@v2
+        continue-on-error: true
+        with:
+          ktlint-version: '1.0.0'
+          level: 'warning'
+
+          # ktlint
+          code-style: android_studio
+          relative: true
+          verbose: true
+          android: true
+          experimental: true
+          reporter: |
+            plain,output=ktlint_report.txt
+            json,output=ktlint_report.json
+          patterns: |
+            **/**.kt
+            !**/generated/**
